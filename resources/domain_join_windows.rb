@@ -120,7 +120,7 @@ action :join do
   windows_task 'remove chef ad-join' do
     task_name 'chef ad-join' # http://bit.ly/1WDZ1kn
     notifies :delete, 'registry_key[warning]', :delayed
-    frequency :once
+    #frequency :once
     action :delete
   end
 end
@@ -189,7 +189,7 @@ action :leave do
 
   windows_task 'chef ad-join task delete' do
     task_name 'chef ad-join leave' # http://bit.ly/1WDZ1kn
-    frequency :once
+    #frequency :once
     notifies :delete, 'registry_key[warning]', :delayed
     action :delete
   end
